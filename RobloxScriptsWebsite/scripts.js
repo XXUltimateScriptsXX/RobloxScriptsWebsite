@@ -15,6 +15,10 @@ const scripts = [
 	{
         name: "CoolKid Clan",
         code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/cfsmi2/c00lguiv1/refs/heads/main/Main.lua", true))()`
+    },
+	{
+        name: "Speed Hub X (supports alot of games)",
+        code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()`
     }
 ];
 
@@ -83,4 +87,5 @@ function updateBackground() {
     requestAnimationFrame(updateBackground);
 }
 updateBackground();
+
 
