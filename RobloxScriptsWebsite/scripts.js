@@ -3,7 +3,7 @@ const scripts = [
     { name: "Grow A Garden Trade Freeze", code: `loadstring(game:HttpGet("https://pastefy.app/n0IQebNb/raw"))()` },
     { name: "Blox Fruits Trade Freeze", code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/XXUltimateScriptsXX/BloxFruits/refs/heads/main/TradeFreeze"))()` },
     { name: "Steal A Brainrot Spawner", code: `loadstring(game:HttpGet('https://paste.rs/0dDeC'))()` },
-    { name: "FeUniversal (Beta, supports 2 games rn..)", code: `loadstring(game:HttpGet('https://raw.githubusercontent.com/XXUltimateScriptsXX/FeUniversal/refs/heads/main/XxScripthubxXFeV4DECOMPILED'))()` },
+    { name: "FeUniversal (Beta, supports 2 games rn, **BEST FOR TROLLING**)", code: `loadstring(game:HttpGet('https://raw.githubusercontent.com/XXUltimateScriptsXX/FeUniversal/refs/heads/main/XxScripthubxXFeV4DECOMPILED'))()` },
     { name: "CoolKid Clan", code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/cfsmi2/c00lguiv1/refs/heads/main/Main.lua", true))()` },
     { name: "Speed Hub X (supports alot of games)", code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()` }
 ];
@@ -81,3 +81,4 @@ howToUseButton.style.border = "2px solid #000";
 howToUseButton.style.color = "#fff";
 howToUseButton.style.background = "#3498db";
 howToUseButton.style.cursor = "pointer";
+
