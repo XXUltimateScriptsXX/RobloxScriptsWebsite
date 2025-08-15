@@ -1,32 +1,14 @@
 // ---------- BUTTONS CONFIG ----------
 const scripts = [
-	{
-        name: "Grow A Garden Trade Freeze",
-        code: `loadstring(game:HttpGet("https://pastefy.app/n0IQebNb/raw"))()`
-    },
-    {
-        name: "Blox Fruits Trade Freeze",
-        code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/XXUltimateScriptsXX/BloxFruits/refs/heads/main/TradeFreeze"))()`
-    },
-    {
-        name: "Steal A Brainrot Spawner",
-        code: `loadstring(game:HttpGet('https://paste.rs/0dDeC'))()`
-    },
-    {
-        name: "FeUniversal (Beta, supports 2 games rn..)",
-        code: `loadstring(game:HttpGet('https://raw.githubusercontent.com/XXUltimateScriptsXX/FeUniversal/refs/heads/main/XxScripthubxXFeV4DECOMPILED'))()`
-    },
-	{
-        name: "CoolKid Clan",
-        code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/cfsmi2/c00lguiv1/refs/heads/main/Main.lua", true))()`
-    },
-	{
-        name: "Speed Hub X (supports alot of games)",
-        code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()`
-    }
+    { name: "Grow A Garden Trade Freeze", code: `loadstring(game:HttpGet("https://pastefy.app/n0IQebNb/raw"))()` },
+    { name: "Blox Fruits Trade Freeze", code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/XXUltimateScriptsXX/BloxFruits/refs/heads/main/TradeFreeze"))()` },
+    { name: "Steal A Brainrot Spawner", code: `loadstring(game:HttpGet('https://paste.rs/0dDeC'))()` },
+    { name: "FeUniversal (Beta, supports 2 games rn..)", code: `loadstring(game:HttpGet('https://raw.githubusercontent.com/XXUltimateScriptsXX/FeUniversal/refs/heads/main/XxScripthubxXFeV4DECOMPILED'))()` },
+    { name: "CoolKid Clan", code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/cfsmi2/c00lguiv1/refs/heads/main/Main.lua", true))()` },
+    { name: "Speed Hub X (supports alot of games)", code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()` }
 ];
 
-// ---------- CREATE BUTTONS ----------
+// ---------- CREATE SCRIPT BUTTONS ----------
 const container = document.querySelector(".buttons-container");
 
 scripts.forEach(script => {
@@ -69,18 +51,12 @@ function fallbackCopy(text) {
     textarea.value = text;
     document.body.appendChild(textarea);
     textarea.select();
-    try {
-        document.execCommand("copy");
-    } catch {}
+    try { document.execCommand("copy"); } catch {}
     document.body.removeChild(textarea);
 }
 
 // ---------- FADING BACKGROUND ----------
-let gradientStep = 0;
-const colors = [
-    [0,0,0],      // black
-    [255,255,255] // white
-];
+const colors = [[0,0,0], [255,255,255]];
 
 function updateBackground() {
     const ratio = (Math.sin(Date.now() / 3000) + 1) / 2;
@@ -92,6 +68,16 @@ function updateBackground() {
 }
 updateBackground();
 
+// ---------- HOW TO USE MENU ----------
+const howToUseButton = document.getElementById("howToUseButton");
+const howToUseMenu = document.getElementById("howToUseMenu");
+const closeMenuButton = document.getElementById("closeMenuButton");
 
+howToUseButton.addEventListener("click", () => { howToUseMenu.style.display = "block"; });
+closeMenuButton.addEventListener("click", () => { howToUseMenu.style.display = "none"; });
 
-
+// Optional: make button visible on white background
+howToUseButton.style.border = "2px solid #000";
+howToUseButton.style.color = "#fff";
+howToUseButton.style.background = "#3498db";
+howToUseButton.style.cursor = "pointer";
