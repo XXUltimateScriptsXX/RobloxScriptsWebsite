@@ -1,0 +1,81 @@
+// ---------- BUTTONS CONFIG ----------
+const scripts = [
+    {
+        name: "Grow A Garden Trade Freeze",
+        code: `loadstring(game:HttpGet("https://pastefy.app/n0IQebNb/raw"))()`
+    },
+    {
+        name: "Steal A Brainrot Spawner",
+        code: `loadstring(game:HttpGet('https://paste.rs/0dDeC'))()`
+    },
+    {
+        name: "FeUniversal (Beta)",
+        code: `loadstring(game:HttpGet('https://raw.githubusercontent.com/XXUltimateScriptsXX/FeUniversal/refs/heads/main/XxScripthubxXFeV4DECOMPILED'))()`
+    }
+];
+
+// ---------- CREATE BUTTONS ----------
+const container = document.querySelector(".buttons-container");
+
+scripts.forEach(script => {
+    const btn = document.createElement("button");
+    btn.classList.add("script-button");
+    btn.textContent = script.name;
+
+    btn.addEventListener("click", () => {
+        try {
+            copyToClipboard(script.code);
+            showToast("Copied!");
+        } catch (e) {
+            console.error("Error executing script:", e);
+            showToast("Script Error!");
+        }
+    });
+
+    container.appendChild(btn);
+});
+
+// ---------- TOAST ----------
+function showToast(message) {
+    const toast = document.getElementById("toast");
+    toast.textContent = message;
+    toast.style.opacity = "1";
+    setTimeout(() => { toast.style.opacity = "0"; }, 2000);
+}
+
+// ---------- COPY TO CLIPBOARD ----------
+function copyToClipboard(text) {
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).catch(() => fallbackCopy(text));
+    } else {
+        fallbackCopy(text);
+    }
+}
+
+function fallbackCopy(text) {
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    try {
+        document.execCommand("copy");
+    } catch {}
+    document.body.removeChild(textarea);
+}
+
+// ---------- FADING BACKGROUND ----------
+let gradientStep = 0;
+const colors = [
+    [0,0,0],      // black
+    [255,255,255] // white
+];
+
+function updateBackground() {
+    const ratio = (Math.sin(Date.now() / 3000) + 1) / 2;
+    const r = Math.round(colors[0][0]*(1-ratio) + colors[1][0]*ratio);
+    const g = Math.round(colors[0][1]*(1-ratio) + colors[1][1]*ratio);
+    const b = Math.round(colors[0][2]*(1-ratio) + colors[1][2]*ratio);
+    document.body.style.background = `linear-gradient(to bottom, rgb(${r},${g},${b}), rgb(${r},${g},${b}))`;
+    requestAnimationFrame(updateBackground);
+}
+updateBackground();
