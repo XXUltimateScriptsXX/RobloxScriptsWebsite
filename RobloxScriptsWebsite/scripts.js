@@ -11,6 +11,10 @@ const scripts = [
     {
         name: "FeUniversal (Beta, supports 2 games rn..)",
         code: `loadstring(game:HttpGet('https://raw.githubusercontent.com/XXUltimateScriptsXX/FeUniversal/refs/heads/main/XxScripthubxXFeV4DECOMPILED'))()`
+    },
+	{
+        name: "CoolKid Script",
+        code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/cfsmi2/c00lguiv1/refs/heads/main/Main.lua", true))()`
     }
 ];
 
