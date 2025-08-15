@@ -9,7 +9,7 @@ const scripts = [
         code: `loadstring(game:HttpGet('https://paste.rs/0dDeC'))()`
     },
     {
-        name: "FeUniversal (Beta)",
+        name: "FeUniversal (Beta, supports 2 games rn..)",
         code: `loadstring(game:HttpGet('https://raw.githubusercontent.com/XXUltimateScriptsXX/FeUniversal/refs/heads/main/XxScripthubxXFeV4DECOMPILED'))()`
     }
 ];
