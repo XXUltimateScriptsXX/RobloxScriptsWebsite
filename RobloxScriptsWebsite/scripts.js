@@ -13,7 +13,7 @@ const scripts = [
         code: `loadstring(game:HttpGet('https://raw.githubusercontent.com/XXUltimateScriptsXX/FeUniversal/refs/heads/main/XxScripthubxXFeV4DECOMPILED'))()`
     },
 	{
-        name: "CoolKid Script",
+        name: "CoolKid Clan",
         code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/cfsmi2/c00lguiv1/refs/heads/main/Main.lua", true))()`
     }
 ];
@@ -83,3 +83,4 @@ function updateBackground() {
     requestAnimationFrame(updateBackground);
 }
 updateBackground();
+
