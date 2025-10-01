@@ -6,7 +6,7 @@ const scripts = [
     { name: "FeUniversal (Beta, supports 2 games rn, **BEST FOR TROLLING**)", code: `loadstring(game:HttpGet('https://raw.githubusercontent.com/XXUltimateScriptsXX/FeUniversal/refs/heads/main/XxScripthubxXFeV4DECOMPILED'))()` },
     { name: "CoolKid Clan", code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/cfsmi2/c00lguiv1/refs/heads/main/Main.lua", true))()` },
     { name: "Speed Hub X (supports alot of games)", code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()` },
-    { name: "Best Steal A Brainrot Script", code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/XXUltimateScriptsXX/UglyScriptsOnTop/refs/heads/main/UglyOnTopREMADE", true))()` },
+    { name: "Best Steal A Brainrot Script (shared)", code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/XXUltimateScriptsXX/UglyScriptsOnTop/refs/heads/main/UglyOnTopREMADE", true))()` },
 ];
 
 // ---------- CREATE SCRIPT BUTTONS ----------
@@ -82,5 +82,6 @@ howToUseButton.style.border = "2px solid #000";
 howToUseButton.style.color = "#fff";
 howToUseButton.style.background = "#3498db";
 howToUseButton.style.cursor = "pointer";
+
 
 
